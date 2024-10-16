@@ -10,5 +10,5 @@ Route::get('/home', function () {
     return view('frontend.home');
 });
 Route::get('/data-warga', function () {
-    return view('admin.data_warga');
+    return view('admin.data_warga.index');
 });
