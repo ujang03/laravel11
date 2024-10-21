@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Sistem Informasi Gang</title>
+    <link href="{{asset('frontend/images/jsr.png')}}" rel="shortcut icon" type="image/png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -38,7 +39,7 @@
 
                 <!-- Brand -->
                 <a class="navbar-brand" href="#">
-                    <img src="img/warga.png" height="30" width="150" alt="" loading="lazy" />
+                    <img src="img/jsr.png" height="45" width="250" alt="" loading="lazy" />
                 </a>
                 <!-- Search form -->
                 <form class="d-none d-md-flex input-group w-auto my-auto">

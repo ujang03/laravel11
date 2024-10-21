@@ -79,7 +79,7 @@
 									</form>
 								</div>
 							</div>
-							<div class="side-panel-content">
+							<!-- <div class="side-panel-content">
 								<div class="close-icon">
 									<button><i class="webex-icon-cross"></i></button>
 								</div>
@@ -116,7 +116,7 @@
 									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 									<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
 								</ul>
-							</div>
+							</div> -->
 							<div class="main-menu f-right">
 								<nav id="mobile-menu-right">
 									<ul>
@@ -160,7 +160,7 @@
 											<ul class="sub-menu">
 												<li><a href="page-all-services.html">Tetangga</a></li>
 												<li><a href="service-business-maintanance.html">Tambah Warga Baru</a></li>
-												<li><a href="service-finance-and-management.html">List Warga</a></li>
+												<li><a href="/data-warga">Data Warga</a></li>
 												<!-- <li><a href="service-business-consulting.html">Business Consulting</a></li>
 												<li><a href="service-business-partnership.html">Business Partnership</a></li>
 												<li><a href="service-company-development.html">Company Development</a></li>

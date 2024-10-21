@@ -64,8 +64,8 @@
 								<span class="webexflaticon flaticon-growth"></span>
 							</div>
 							<div class="service-content">
-								<div class="title">
-									<a href="#"><h3>Data Warga</h3></a>
+								<div class="{{ request()->is('data-warga') ? 'active' : '' }}">
+									<a href="/data-warga"><h3>Data Warga</h3></a>
 								</div>
 								<div class="para">
 									<p>Survei jumlah warga sekitar Gang Elang</p>
