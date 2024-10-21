@@ -38,6 +38,10 @@
                   data-mdb-ripple-init data-mdb-target="#staticBackdrop">
                   Edit
                 </button>
+                <button type="button" class="btn btn-danger btn-sm btn-rounded" data-mdb-modal-init
+                  data-mdb-ripple-init data-mdb-target="#staticBackdrop">
+                  Hapus
+                </button>
               </td>
             </tr>
           </tbody>
