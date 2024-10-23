@@ -31,10 +31,8 @@
 						</div>
 						<div class="col-lg-6 header-top-right-part text-right">
 							<ul class="social-links">
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+								<li><a href="#"><i class=""></i>Login User</a></li>
+								
 							</ul>
 							<div class="language">
 								<a class="language-btn" href="#"><i class="webexflaticon flaticon-internet"></i>Indo</a>

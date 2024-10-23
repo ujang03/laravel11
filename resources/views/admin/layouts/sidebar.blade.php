@@ -1,11 +1,11 @@
 <nav id="sidebarMenu" class="d-lg-block sidebar collapse bg-white">
     <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
-            <a href="#" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init aria-current="true">
-                <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+            <a href="/admin" class="{{ request()->routeIs('admin.home') ? 'active' : '' }} list-group-item list-group-item-action py-2" data-mdb-ripple-init aria-current="true">
+                <i class="fas fa-users fa-fw me-3"></i><span>Main dashboard</span>
             </a>
-            <a href="/"
-                class="{{ request()->routeIs('admin.home') ? 'active' : '' }} list-group-item list-group-item-action py-2"
+            <a href=""
+                class="list-group-item list-group-item-action py-2"
                 data-mdb-ripple-init>
                 <i class="fas fa-users fa-fw me-3"></i><span>Tetangga Anda </span></a>
             <a href="/data-warga"

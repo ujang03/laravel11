@@ -79,9 +79,9 @@
             </a>
           </li> -->
 
-                    <!-- Avatar -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+<!-- Avatar -->
+    <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
                             id="navbarDropdownMenuLink" role="button" data-mdb-dropdown-init aria-expanded="false">
                             <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle"
                                 height="22" alt="" loading="lazy" />
@@ -110,6 +110,27 @@
     <script type="text/javascript" src="{{asset('backend/js/mdb.umd.min.js')}}"></script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="{{asset('backend/js/admin.js')}}"></script>
+
+<div>
+<!-- Footer Area Start -->
+<!-- <footer class="footer">
+		<div class="footer-bottom-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="text-center">
+							<span class="text-light-gray">Copyright © 2024 by <a class="text-primary-color" target="_blank" href=""> @TukangKayu Simpur</a> | All rights reserved </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer> -->
+	<!-- Footer Area End -->
+
+</div>
+    
+
 
 </body>
 
