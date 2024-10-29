@@ -12,3 +12,6 @@ Route::get('/home', function () {
 Route::get('/data-warga', function () {
     return view('admin.data_warga.index');
 });
+Route::get('/agenda-gang', function () {
+    return view('admin.agenda_gang.index');
+});

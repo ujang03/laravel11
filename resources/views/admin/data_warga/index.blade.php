@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('content')
-<!--Section: Sales Performance KPIs-->
+<!--Section:data warga-->
 <section class="mb-4">
   <div class="card">
     <div class="card-header text-center py-3">
@@ -50,7 +50,7 @@
     </div>
   </div>
 </section>
-<!--Section: Sales Performance KPIs-->
+<!--Section: data warga-->
 
 
 <!--Modal:Tambah Warga-->
