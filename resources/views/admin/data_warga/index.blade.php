@@ -22,7 +22,7 @@
               <th scope="col">Agama</th>
               <th scope="col">Jenis Pekerjaan</th>
               <th scope="col">Golongan Darah</th>
-              <th scope="col">Aksi</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>

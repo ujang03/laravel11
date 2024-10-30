@@ -14,12 +14,12 @@
             <a href="/agenda-gang"
                 class="{{ request()->is('agenda-gang') ? 'active' : '' }}  list-group-item list-group-item-action py-2"
                 data-mdb-ripple-init><i class="fas fa-calendar fa-fw me-3"></i><span>Agenda Gang</span></a>
-            <a href="#" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                    class="fas fa-money-bill fa-fw me-3"></i><span>Keuangan Gang</span></a>
-            <a href="#" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                    class="fa-sharp fa-solid fa-user me-4"></i><span>Users</span></a>
-            <a href="#" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                    class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
+            <a href="/accounting"
+                class="{{ request()->is('accounting') ? 'active' : '' }} list-group-item list-group-item-action py-2"
+                data-mdb-ripple-init><i class="fas fa-money-bill fa-fw me-3"></i><span>Keuangan Gang</span></a>
+            <a href="" class=" list-group-item list-group-item-action py-2"
+                data-mdb-ripple-init><i class="fa-sharp fa-solid fa-user me-4"></i><span>Users</span></a>
+            <a href="#" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
             <!-- <a href=" #" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                     <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span></a>
             <a href="#" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i

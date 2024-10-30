@@ -15,3 +15,6 @@ Route::get('/data-warga', function () {
 Route::get('/agenda-gang', function () {
     return view('admin.agenda_gang.index');
 });
+Route::get('/accounting', function () {
+    return view('admin.accounting.index');
+});
