@@ -1,5 +1,6 @@
 @extends('admin.layouts.app')
 @section('content')
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 <div class="page-content">
@@ -8,7 +9,7 @@
         <div class="card">
             <div class="card-body">
                 <h4>Tambah Jenis Barang</h4>
-                <form method="post" action="{{route('jenisbrg.store')}}">
+                <form method="post" action="">
                     @csrf
 
                     <div class="row mb-3">
