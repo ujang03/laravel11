@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('families', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("user_id");
+            $table->foreignId("user_id")->constrained("users","id","userfamilies");
             $table->string("relationship");
             $table->enum("gender",["Perempuan","Laki-laki"]);            
             $table->string("birth_place");
