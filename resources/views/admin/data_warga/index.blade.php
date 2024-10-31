@@ -26,6 +26,27 @@
             </tr>
           </thead>
           <tbody>
+            @forelse ($dataWarga as $i => $item)
+            <tr>
+              <th scope="row">{{ $i++ }}</th>
+              <td>{{ $item->name }}</td>
+              <td>{{ $item->user_profile->gender }}</td>
+              <td>{{ $item->user_profile->religion }}</td>
+              <td>{{ $item->user_profile->job }}</td>
+              <td>AB</td>
+              <td>
+                <button type="button" class="btn btn-warning btn-sm btn-rounded" data-mdb-modal-init
+                  data-mdb-ripple-init data-mdb-target="#staticBackdrop">
+                  Edit
+                </button>
+                <button type="button" class="btn btn-danger btn-sm btn-rounded" data-mdb-modal-init data-mdb-ripple-init
+                  data-mdb-target="#staticBackdrop">
+                  Hapus
+                </button>
+              </td>
+            </tr>
+            @empty
+
             <tr>
               <th scope="row">Ujang Nurzaman</th>
               <td>F 11/3</td>
@@ -38,12 +59,13 @@
                   data-mdb-ripple-init data-mdb-target="#staticBackdrop">
                   Edit
                 </button>
-                <button type="button" class="btn btn-danger btn-sm btn-rounded" data-mdb-modal-init
-                  data-mdb-ripple-init data-mdb-target="#staticBackdrop">
+                <button type="button" class="btn btn-danger btn-sm btn-rounded" data-mdb-modal-init data-mdb-ripple-init
+                  data-mdb-target="#staticBackdrop">
                   Hapus
                 </button>
               </td>
             </tr>
+            @endforelse
           </tbody>
         </table>
       </div>

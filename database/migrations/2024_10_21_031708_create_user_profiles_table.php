@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('user_profiles', function (Blueprint $table) {
-            $table->foreignId("id")->constrained("users","id","indexuser");
+            $table->id();
+            $table->foreignId("user_id")->constrained("users", "id", "indexuser");
             $table->text("address");
-            $table->enum("gender",["Perempuan","Laki-laki"]);
+            $table->enum("gender", ["Perempuan", "Laki-laki"]);
             $table->string("religion");
             $table->string("job");
-            $table->enum("blood_type",["AB","B","A","O"]);
+            $table->enum("blood_type", ["AB", "B", "A", "O"]);
             $table->string("familly_card_url");
             $table->timestamps();
         });
