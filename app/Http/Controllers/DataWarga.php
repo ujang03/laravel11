@@ -9,8 +9,9 @@ class DataWarga extends Controller
 {
     public function index()
     {
-        $dataWarga = User::Join('user_profiles', 'user_profiles.user_id', '=', 'users.id')->select('users.*', 'user_profiles.*')->get();
-        dd($dataWarga);
+        // $dataWarga = User::Join('user_profiles', 'user_profiles.user_id', '=', 'users.id')->select('users.*', 'user_profiles.*')->get();
+        $dataWarga = User::with('profile')->get();
+        // dd($dataWarga);
 
         return view('admin.data_warga.index', compact('dataWarga'));
     }
