@@ -1,5 +1,5 @@
-@extends('admin.admin_layouts')
-@section('lalyouts')
+@extends('admin.layouts.app')
+@section('layouts')
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 <div class="page-content">
@@ -36,17 +36,12 @@
                         <label for="currency" class="col-sm-2 col-form-label">Chart Of Account</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="coa_id" id="coa_id">
-                                <option>Pilih COA:</option>
-                               
-                                    <option value="{{$item->id}}"></option>
-                                
+                                <option>Pilih COA:</option>                            
                             </select>
                         </div>
-                    </div>
-
-                    
+                    </div>  
                     <input type="submit" class="btn btn-outline-info" value="Tambah Bank Account">
-                    <a href="{{route('bank_account.index')}}" class="btn btn-outline-danger">Cancel</a>
+                    <a href="" class="btn btn-outline-danger">Cancel</a>
                 </form>
             </div>
         </div>
