@@ -2,7 +2,7 @@
 
 @section('content')
 <!--Section:data warga-->
-<section class="mb-4">
+{{-- <section class="mb-4">
   <div class="card">
     <div class="card-header text-center py-3">
       <h5 class="mb-0 text-center">
@@ -72,11 +72,11 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 <!--Section: data warga-->
 
-
-@include('admin.data_warga.modal-warga')
+@livewire('data-warga')
+{{-- @include('admin.data_warga.modal-warga') --}}
 
 
 @endsection
