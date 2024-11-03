@@ -27,11 +27,11 @@
                             <tr>
 
                                 <th scope="row">{{ $item->name }}</th>
-                                <td>{{ $item->profile->gender }}</td>
-                                <td>{{ $item->profile->religion }}</td>
-                                <td>{{ $item->profile->blood_type }}</td>
-                                <td>{{ $item->profile->job }}</td>
-                                <td>AB</td>
+                                <td>{{ $item->profile->address ??'' }}</td>
+                                <td>{{ $item->profile->gender ??'' }}</td>
+                                <td>{{ $item->profile->religion ??'' }}</td>
+                                <td>{{ $item->profile->job ??''}}</td>
+                                <td>{{ $item->profile->blood_type ??''}}</td>
                                 <td>
                                     <button type="button" class="btn btn-warning btn-sm btn-rounded" data-mdb-modal-init
                                         data-mdb-ripple-init data-mdb-target="#staticBackdrop">
@@ -71,31 +71,31 @@
     </section>
 
     <!--Modal:Tambah Warga-->
-    <div class="modal fade" id="staticBackdrop" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1"
-        aria-hidden="true">
+    <div wire:ignore.self class="modal fade" id="staticBackdrop" data-mdb-backdrop="static" data-mdb-keyboard="false"
+        tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">{{ $statusEdit?'Edit':'Tambah' }} Warga</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">{{ $updateData?'Edit':'Tambah' }} Warga</h5>
                     <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <form wire:submit='save'>
+                <form>
                     <div class="modal-body">
                         <div data-mdb-input-init class="form-outline mb-4">
-                            <input wire:model="name" type="text" id="form6Example1" class="form-control" />
-                            <label class="form-label" for="form6Example1">Nama Lengkap</label>
+                            <input wire:model="name" type="text" class="form-control" />
+                            <label class="form-label">Nama Lengkap</label>
                         </div>
 
                         <!-- Text input -->
                         <div data-mdb-input-init class="form-outline mb-4">
-                            <input wire:model='address' type="text" id="form6Example4" class="form-control" />
-                            <label class="form-label" for="form6Example4">Alamat</label>
+                            <input wire:model='address' type="text" class="form-control" />
+                            <label class="form-label">Alamat</label>
                         </div>
 
                         <div data-mdb-select-init class="form-outline mb-4">
-                            <label for="selectGender" class="form-label mb-0"><small>Jenis kelamin</small></label>
-                            <select wire:model='gender' id="selectGender" class="form-select">
+                            <label class="form-label mb-0">Jenis kelamin</label>
+                            <select wire:model='gender' class="form-select">
                                 <option></option>
                                 <option value="Laki-laki">Laki - Laki</option>
                                 <option value="Perempuan">Perempuan</option>
@@ -103,8 +103,8 @@
                         </div>
 
                         <div data-mdb-select-init class="form-outline mb-4">
-                            <label for="selectReligion" class="form-label mb-0"><small>Agama</small></label>
-                            <select wire:model='religion' id="selectReligion" class="form-select">
+                            <label class="form-label mb-0">Agama</label>
+                            <select wire:model='religion' class="form-select">
                                 <option></option>
                                 <option value="Islam">Islam</option>
                                 <option value="Protestan">Protestan</option>
@@ -115,13 +115,13 @@
                         </div>
 
                         <div data-mdb-input-init class="form-outline mb-4">
-                            <input wire:model='job' type="text" id="form6Example5" class="form-control" />
-                            <label class="form-label" for="form6Example5">Jenis Pekerjaan</label>
+                            <input wire:model='job' type="text" class="form-control" />
+                            <label class="form-label">Jenis Pekerjaan</label>
                         </div>
 
                         <div data-mdb-input-init class="form-outline mb-4">
-                            <label for="selectBloodType" class="form-label mb-0"><small>Golongan Darah</small></label>
-                            <select wire:model='blood_type' id="selectBloodType" class="form-select">
+                            <label class="form-label mb-0">Golongan Darah</label>
+                            <select wire:model='blood_type' class="form-select">
                                 <option></option>
                                 <option value="AB">AB</option>
                                 <option value="B">B</option>
@@ -133,15 +133,16 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-mdb-ripple-init
                             data-mdb-dismiss="modal">Close</button>
-                        @if ($statusEdit)
-                        <button type="submit" class="btn btn-primary" data-mdb-ripple-init>Update</button>
+                        @if ($updateData)
+                        <button type="button" class="btn btn-primary" data-mdb-ripple-init>Update</button>
                         @else
-                        <button type="submit" class="btn btn-primary" data-mdb-ripple-init>Save</button>
-
+                        <button wire:click='save' type="button" class="btn btn-primary"
+                            data-mdb-ripple-init>Save</button>
                         @endif
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
 </div>
