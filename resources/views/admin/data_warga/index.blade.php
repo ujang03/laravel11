@@ -32,38 +32,27 @@
               <td>{{ $item->profile->address ?? '' }}</td>
               <td>{{ $item->profile->gender ?? '' }}</td>
               <td>{{ $item->profile->religion ??'' }}</td>
-              <td>{{ $item->profile->blood_type??'' }}</td>
               <td>{{ $item->profile->job ??''}}</td>
+              <td>{{ $item->profile->blood_type??'' }}</td>
               <td>
-                <button type="button" class="btn btn-warning btn-sm btn-rounded editbtn" data-mdb-modal-init
-                  data-mdb-ripple-init data-mdb-target="#staticBackdrop" value="{{ $item->id }}">
+                <a href="{{ route('data-warga.edit', $item->id) }}" class="btn btn-warning btn-sm btn-rounded">
                   Edit
-                </button>
-                <button type="button" class="btn btn-danger btn-sm btn-rounded" data-mdb-modal-init data-mdb-ripple-init
-                  data-mdb-target="#staticBackdrop">
-                  Hapus
-                </button>
+                </a>
+                <form action="{{ route('data-warga.destroy', $item->id) }}" method="POST" class="d-inline">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger btn-sm btn-rounded">
+                    Hapus
+                  </button>
+                </form>
               </td>
             </tr>
             @empty
             <tr>
-              <th scope="row">Ujang Nurzaman</th>
-              <td>F 11/3</td>
-              <td>Laki-Laki</td>
-              <td>Islam</td>
-              <td>Karyawan</td>
-              <td>AB</td>
-              <td>
-                <button type="button" class="btn btn-warning btn-sm btn-rounded" data-mdb-modal-init
-                  data-mdb-ripple-init data-mdb-target="#staticBackdrop">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger btn-sm btn-rounded" data-mdb-modal-init data-mdb-ripple-init
-                  data-mdb-target="#staticBackdrop">
-                  Hapus
-                </button>
-              </td>
+              <th colspan='7' class="text-center">Kosong</th>
+
             </tr>
+
             @endforelse
           </tbody>
         </table>
@@ -74,7 +63,7 @@
 <!--Section: data warga-->
 
 
-@include('admin.data_warga.modal-warga')
+@include('admin.data_warga.modal-tambah')
 
 
 @endsection

@@ -38,7 +38,15 @@ class DataWarga extends Controller
 
     public function edit($id)
     {
-        $dataWarga = User::with('profile')->find($id);
-        return response()->json(['status' => 200, 'warga' => $dataWarga]);
+        $item = User::with('profile')->find($id);
+        return view('admin.data_warga.edit', compact('item'));
+    }
+
+    public function delete($id)
+    {
+        $dataWarga = User::find($id);
+        $dataWarga->profile()->delete();
+        $dataWarga->delete();
+        return redirect()->route('data-warga.index');
     }
 }

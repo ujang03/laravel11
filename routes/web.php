@@ -15,6 +15,7 @@ Route::get('/home', function () {
 Route::get('/data-warga', [DataWarga::class, 'index'])->name('data-warga.index');
 Route::post('/data-warga', [DataWarga::class, 'store'])->name('data-warga.store');
 Route::get('/data-warga/{id}', [DataWarga::class, 'edit'])->name('data-warga.edit');
+Route::delete('/data-warga/{id}', [DataWarga::class, 'delete'])->name('data-warga.destroy');
 
 //Route untuk agenda gang
 Route::get('/agenda-gang', [Berita::class, 'index'])->name('news.index');

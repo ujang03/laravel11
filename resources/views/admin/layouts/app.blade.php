@@ -39,7 +39,7 @@
 
                 <!-- Brand -->
                 <a class="navbar-brand" href="#">
-                    <img src="img/jsr.png" height="45" width="250" alt="" loading="lazy" />
+                    <img src="{{ asset('img/jsr.png') }}" height="45" width="250" alt="" loading="lazy" />
                 </a>
                 <!-- Search form -->
                 <form class="d-none d-md-flex input-group w-auto my-auto">
@@ -79,9 +79,9 @@
             </a>
           </li> -->
 
-<!-- Avatar -->
-    <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    <!-- Avatar -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
                             id="navbarDropdownMenuLink" role="button" data-mdb-dropdown-init aria-expanded="false">
                             <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle"
                                 height="22" alt="" loading="lazy" />
@@ -111,9 +111,9 @@
     <!-- Custom scripts -->
     <script type="text/javascript" src="{{asset('backend/js/admin.js')}}"></script>
 
-<div>
-<!-- Footer Area Start -->
-<!-- <footer class="footer">
+    <div>
+        <!-- Footer Area Start -->
+        <!-- <footer class="footer">
 		<div class="footer-bottom-area">
 			<div class="container">
 				<div class="row">
@@ -126,10 +126,10 @@
 			</div>
 		</div>
 	</footer> -->
-	<!-- Footer Area End -->
+        <!-- Footer Area End -->
 
-</div>
-    
+    </div>
+
 
 
 </body>
