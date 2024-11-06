@@ -28,16 +28,15 @@
           <tbody>
             @forelse ($dataWarga as $i => $item)
             <tr>
-
               <th scope="row">{{ $item->name }}</th>
-              <td>{{ $item->profile->gender }}</td>
-              <td>{{ $item->profile->religion }}</td>
-              <td>{{ $item->profile->blood_type }}</td>
-              <td>{{ $item->profile->job }}</td>
-              <td>AB</td>
+              <td>{{ $item->profile->address ?? '' }}</td>
+              <td>{{ $item->profile->gender ?? '' }}</td>
+              <td>{{ $item->profile->religion ??'' }}</td>
+              <td>{{ $item->profile->blood_type??'' }}</td>
+              <td>{{ $item->profile->job ??''}}</td>
               <td>
-                <button type="button" class="btn btn-warning btn-sm btn-rounded" data-mdb-modal-init
-                  data-mdb-ripple-init data-mdb-target="#staticBackdrop">
+                <button type="button" class="btn btn-warning btn-sm btn-rounded editbtn" data-mdb-modal-init
+                  data-mdb-ripple-init data-mdb-target="#staticBackdrop" value="{{ $item->id }}">
                   Edit
                 </button>
                 <button type="button" class="btn btn-danger btn-sm btn-rounded" data-mdb-modal-init data-mdb-ripple-init
@@ -47,7 +46,6 @@
               </td>
             </tr>
             @empty
-
             <tr>
               <th scope="row">Ujang Nurzaman</th>
               <td>F 11/3</td>

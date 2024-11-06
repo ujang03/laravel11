@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string("religion");
             $table->string("job");
             $table->enum("blood_type", ["AB", "B", "A", "O"]);
-            $table->string("familly_card_url");
+            $table->string("familly_card_url")->nullable();
             $table->timestamps();
         });
     }
