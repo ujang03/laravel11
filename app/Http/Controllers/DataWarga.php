@@ -49,4 +49,20 @@ class DataWarga extends Controller
         $dataWarga->delete();
         return redirect()->route('data-warga.index');
     }
+
+    public function update(Request $request, $id)
+    {
+
+        $dataWarga = User::with('profile')->find($id);
+        $validated = $request->validate($this->rules);
+        $dataWarga->update($validated);
+        $dataWarga->profile()->update([
+            'address' => $request->address,
+            'gender' => $request->gender,
+            'religion' => $request->religion,
+            'job' => $request->job,
+            'blood_type' => $request->blood_type,
+        ]);
+        return redirect()->route('data-warga.index');
+    }
 }

@@ -11,13 +11,13 @@
       <form action="{{ route('data-warga.store') }}" method="POST">
         @csrf
         <div class="modal-body">
-          <div class="form-outline mb-4">
+          <div data-mdb-input-init class="form-outline mb-4">
             <input type="text" id="form6Example1" class="form-control" name="name" />
             <label class="form-label" for="form6Example1">Nama Lengkap</label>
           </div>
 
           <!-- Text input -->
-          <div class="form-outline mb-4">
+          <div data-mdb-input-init class="form-outline mb-4">
             <input type="text" id="form6Example4" class="form-control" name="address" />
             <label class="form-label" for="form6Example4">Alamat</label>
           </div>
